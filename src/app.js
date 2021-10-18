@@ -18,11 +18,9 @@ app.post('/', async (req, res) => {
   }
 
   try {
-    const response = await axios.post('http://localhost:3334/', {
+    await axios.post('http://localhost:3334/', {
       user: author,
-    }); 
-
-    console.log(response.data);
+    });
   } catch (err) {
     console.error('Error while logging', err);
   }
