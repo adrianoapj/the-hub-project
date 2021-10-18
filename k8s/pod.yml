@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: the-hub
+  labels:
+    app: web
+spec:
+  containers:
+  - name: the-hub-main
+    image: us.gcr.io/rocketseat-42/the-hub:latest
+    ports:
+    - containerPort: 3333
+  - name: the-hub-logger
+    image: us.gcr.io/rocketseat-42/the-hub-logger:latest
+    ports:
+    - containerPort: 3334
